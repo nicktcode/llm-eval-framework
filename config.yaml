@@ -1,0 +1,27 @@
+# LLM Evaluation Framework Configuration
+
+model:
+  name: "claude-sonnet-4-20250514"
+  max_tokens: 1024
+
+judge:
+  model: "claude-sonnet-4-20250514"
+  max_tokens: 512
+  temperature: 0.0
+
+experiments:
+  temperatures: [0.0, 0.5, 1.0]
+  system_prompts:
+    minimal: "You are a helpful assistant."
+    detailed: "You are a knowledgeable assistant. Answer questions accurately, concisely, and honestly. If you are unsure about something, say so rather than guessing. Follow any formatting instructions precisely."
+  consistency_trials: 5
+  judge_agreement_trials: 3
+
+scoring:
+  scale_min: 1
+  scale_max: 5
+
+output:
+  results_dir: "results"
+  report_path: "results/report.md"
+  charts_dir: "results/charts"
