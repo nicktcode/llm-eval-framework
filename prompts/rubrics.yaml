@@ -1,0 +1,103 @@
+# Scoring Rubrics for Each Evaluation Dimension
+# All dimensions scored on a 1-5 scale
+
+factual_accuracy:
+  description: "Evaluates whether the model's output contains correct, verifiable facts."
+  scores:
+    5: "All stated facts are correct and complete. No errors or omissions."
+    4: "Most facts are correct. Minor omissions but no incorrect statements."
+    3: "Some facts are correct but there are notable omissions or one minor error."
+    2: "Multiple factual errors or significant omissions."
+    1: "Mostly or entirely incorrect. Major factual errors present."
+  judge_prompt: |
+    You are evaluating the factual accuracy of a model's response.
+
+    Original question: {prompt}
+    Model's response: {response}
+    Expected facts that should be present: {expected_facts}
+
+    Rate the factual accuracy on a scale of 1-5:
+    5 = All facts correct and complete
+    4 = Mostly correct, minor omissions
+    3 = Some correct, notable omissions or one minor error
+    2 = Multiple errors or significant omissions
+    1 = Mostly incorrect
+
+    Respond with ONLY a JSON object in this format:
+    {{"score": <1-5>, "reasoning": "<brief explanation>"}}
+
+instruction_adherence:
+  description: "Evaluates whether the model followed the specific formatting and constraint instructions."
+  scores:
+    5: "Perfectly follows all instructions. Format, length, and constraints all met."
+    4: "Follows most instructions. One minor deviation that doesn't affect usability."
+    3: "Follows the general intent but misses some specific formatting requirements."
+    2: "Partially follows instructions. Multiple deviations from the requested format."
+    1: "Does not follow instructions. Output format differs significantly from what was requested."
+  judge_prompt: |
+    You are evaluating whether a model followed specific formatting and constraint instructions.
+
+    Original prompt with instructions: {prompt}
+    Model's response: {response}
+    Format requirements: {format_requirements}
+
+    Rate instruction adherence on a scale of 1-5:
+    5 = Perfectly follows all instructions
+    4 = Mostly follows, one minor deviation
+    3 = General intent met but misses specific requirements
+    2 = Partially follows, multiple deviations
+    1 = Does not follow instructions
+
+    Respond with ONLY a JSON object in this format:
+    {{"score": <1-5>, "reasoning": "<brief explanation>"}}
+
+hallucination:
+  description: "Evaluates whether the model introduced claims not supported by the provided context."
+  scores:
+    5: "No hallucination. All claims are directly supported by the context. Model correctly identifies when information is not available."
+    4: "Very minor extrapolation but no fabricated facts. Stays close to the source."
+    3: "Some reasonable inferences made that go slightly beyond the text but aren't harmful."
+    2: "Contains one or more claims not supported by the context."
+    1: "Significant hallucination. Fabricates facts or data not in the provided context."
+  judge_prompt: |
+    You are evaluating whether a model hallucinated information not present in the provided context.
+
+    Original prompt: {prompt}
+    Provided context: {context}
+    Model's response: {response}
+    Expected answer behavior: {expected_answer}
+
+    Rate the hallucination level on a scale of 1-5 (5 = no hallucination, 1 = severe hallucination):
+    5 = No hallucination, all claims supported by context, correctly flags missing info
+    4 = Very minor extrapolation, no fabricated facts
+    3 = Some reasonable inferences beyond the text
+    2 = Contains unsupported claims
+    1 = Significant hallucination, fabricates facts
+
+    Respond with ONLY a JSON object in this format:
+    {{"score": <1-5>, "reasoning": "<brief explanation>"}}
+
+consistency:
+  description: "Evaluates how consistent the model's outputs are across multiple runs of the same prompt."
+  scores:
+    5: "Outputs are semantically identical across all trials. Core facts and structure match perfectly."
+    4: "Outputs convey the same information with only minor wording differences."
+    3: "Outputs agree on main points but differ in details or emphasis."
+    2: "Outputs have notable differences in content or conclusions."
+    1: "Outputs contradict each other or give substantially different answers."
+  judge_prompt: |
+    You are evaluating the consistency between multiple model outputs for the same prompt.
+
+    Original prompt: {prompt}
+    Response A: {response_a}
+    Response B: {response_b}
+
+    Rate the semantic consistency between these two responses on a scale of 1-5:
+    5 = Semantically identical, same core facts and structure
+    4 = Same information, minor wording differences
+    3 = Agree on main points, differ in details
+    2 = Notable differences in content or conclusions
+    1 = Contradictory or substantially different
+
+    Respond with ONLY a JSON object in this format:
+    {{"score": <1-5>, "reasoning": "<brief explanation>"}}

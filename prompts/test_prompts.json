@@ -1,0 +1,382 @@
+{
+  "prompts": [
+    {
+      "id": "fact_01",
+      "category": "factual",
+      "difficulty": "easy",
+      "prompt": "What is the chemical symbol for gold?",
+      "expected_facts": ["Au"],
+      "tags": ["science", "chemistry"]
+    },
+    {
+      "id": "fact_02",
+      "category": "factual",
+      "difficulty": "easy",
+      "prompt": "What year did the Berlin Wall fall?",
+      "expected_facts": ["1989"],
+      "tags": ["history"]
+    },
+    {
+      "id": "fact_03",
+      "category": "factual",
+      "difficulty": "medium",
+      "prompt": "Name the four fundamental forces of nature.",
+      "expected_facts": ["gravitational", "electromagnetic", "strong nuclear", "weak nuclear"],
+      "tags": ["science", "physics"]
+    },
+    {
+      "id": "fact_04",
+      "category": "factual",
+      "difficulty": "medium",
+      "prompt": "What is the approximate distance from the Earth to the Sun in kilometers?",
+      "expected_facts": ["150 million", "149.6 million", "1 AU"],
+      "tags": ["science", "astronomy"]
+    },
+    {
+      "id": "fact_05",
+      "category": "factual",
+      "difficulty": "hard",
+      "prompt": "What was the GDP of Japan in 2023 in US dollars?",
+      "expected_facts": ["4.2 trillion", "4.21 trillion"],
+      "tags": ["economics"]
+    },
+    {
+      "id": "fact_06",
+      "category": "factual",
+      "difficulty": "easy",
+      "prompt": "What is the largest ocean on Earth?",
+      "expected_facts": ["Pacific"],
+      "tags": ["geography"]
+    },
+    {
+      "id": "fact_07",
+      "category": "factual",
+      "difficulty": "medium",
+      "prompt": "Who developed the theory of general relativity?",
+      "expected_facts": ["Einstein", "Albert Einstein"],
+      "tags": ["science", "physics"]
+    },
+    {
+      "id": "fact_08",
+      "category": "factual",
+      "difficulty": "hard",
+      "prompt": "What is the half-life of Carbon-14 in years?",
+      "expected_facts": ["5730", "5,730"],
+      "tags": ["science", "chemistry"]
+    },
+    {
+      "id": "fact_09",
+      "category": "factual",
+      "difficulty": "medium",
+      "prompt": "What programming language was originally developed by Guido van Rossum in 1991?",
+      "expected_facts": ["Python"],
+      "tags": ["technology"]
+    },
+    {
+      "id": "fact_10",
+      "category": "factual",
+      "difficulty": "hard",
+      "prompt": "In what year was the transistor invented at Bell Labs, and who were the three inventors?",
+      "expected_facts": ["1947", "Bardeen", "Brattain", "Shockley"],
+      "tags": ["technology", "history"]
+    },
+    {
+      "id": "adhere_01",
+      "category": "adherence",
+      "difficulty": "easy",
+      "prompt": "List exactly 5 European countries. Return only the country names, one per line, with no numbering or extra text.",
+      "format_requirements": {
+        "line_count": 5,
+        "no_numbering": true,
+        "no_extra_text": true
+      },
+      "tags": ["format", "lists"]
+    },
+    {
+      "id": "adhere_02",
+      "category": "adherence",
+      "difficulty": "medium",
+      "prompt": "Respond with a valid JSON object containing exactly three keys: 'name' (a string), 'age' (an integer), and 'hobbies' (an array of strings with exactly 3 items). Use realistic sample data.",
+      "format_requirements": {
+        "valid_json": true,
+        "required_keys": ["name", "age", "hobbies"],
+        "hobbies_count": 3
+      },
+      "tags": ["format", "json"]
+    },
+    {
+      "id": "adhere_03",
+      "category": "adherence",
+      "difficulty": "hard",
+      "prompt": "Write a haiku about programming. It must follow the 5-7-5 syllable structure strictly. Output only the haiku, nothing else.",
+      "format_requirements": {
+        "line_count": 3,
+        "syllable_pattern": [5, 7, 5],
+        "no_extra_text": true
+      },
+      "tags": ["format", "creative"]
+    },
+    {
+      "id": "adhere_04",
+      "category": "adherence",
+      "difficulty": "easy",
+      "prompt": "Answer the following question in exactly one sentence: Why is the sky blue?",
+      "format_requirements": {
+        "sentence_count": 1
+      },
+      "tags": ["format", "constraints"]
+    },
+    {
+      "id": "adhere_05",
+      "category": "adherence",
+      "difficulty": "medium",
+      "prompt": "Create a markdown table with exactly 3 columns (Name, Category, Price) and exactly 4 data rows listing sneaker models. Use realistic data.",
+      "format_requirements": {
+        "has_table": true,
+        "column_count": 3,
+        "row_count": 4,
+        "required_columns": ["Name", "Category", "Price"]
+      },
+      "tags": ["format", "markdown", "fashion"]
+    },
+    {
+      "id": "adhere_06",
+      "category": "adherence",
+      "difficulty": "medium",
+      "prompt": "Explain what a neural network is. Your response must be between 50 and 75 words. Do not use the words 'complex' or 'sophisticated'.",
+      "format_requirements": {
+        "word_count_min": 50,
+        "word_count_max": 75,
+        "forbidden_words": ["complex", "sophisticated"]
+      },
+      "tags": ["format", "constraints", "technology"]
+    },
+    {
+      "id": "adhere_07",
+      "category": "adherence",
+      "difficulty": "hard",
+      "prompt": "Write a product description for a limited-edition streetwear hoodie. Requirements: exactly 3 paragraphs, each paragraph must start with a different action verb, total word count between 80 and 120 words, must mention a specific color.",
+      "format_requirements": {
+        "paragraph_count": 3,
+        "word_count_min": 80,
+        "word_count_max": 120,
+        "starts_with_verb": true,
+        "mentions_color": true
+      },
+      "tags": ["format", "creative", "fashion"]
+    },
+    {
+      "id": "adhere_08",
+      "category": "adherence",
+      "difficulty": "easy",
+      "prompt": "List 3 benefits of exercise. Use bullet points (hyphens). Keep each point under 10 words.",
+      "format_requirements": {
+        "bullet_count": 3,
+        "bullet_char": "-",
+        "max_words_per_bullet": 10
+      },
+      "tags": ["format", "lists"]
+    },
+    {
+      "id": "adhere_09",
+      "category": "adherence",
+      "difficulty": "hard",
+      "prompt": "Write a Python function called 'fibonacci' that takes an integer n and returns the nth Fibonacci number. Include a docstring. Use only recursion, no loops. Do not include any text outside the code block.",
+      "format_requirements": {
+        "has_code_block": true,
+        "function_name": "fibonacci",
+        "has_docstring": true,
+        "no_loops": true,
+        "no_extra_text": true
+      },
+      "tags": ["format", "code"]
+    },
+    {
+      "id": "adhere_10",
+      "category": "adherence",
+      "difficulty": "medium",
+      "prompt": "Respond with exactly 'YES' or 'NO' to this question: Is water wet?",
+      "format_requirements": {
+        "exact_options": ["YES", "NO"]
+      },
+      "tags": ["format", "constraints"]
+    },
+    {
+      "id": "halluc_01",
+      "category": "hallucination",
+      "difficulty": "easy",
+      "prompt": "Based on the following text, answer the question.\n\nText: The Eiffel Tower was completed in 1889 for the World's Fair. It stands 330 meters tall and is located in Paris, France.\n\nQuestion: When was the Eiffel Tower completed?",
+      "context": "The Eiffel Tower was completed in 1889 for the World's Fair. It stands 330 meters tall and is located in Paris, France.",
+      "expected_answer": "1889",
+      "tags": ["grounded", "history"]
+    },
+    {
+      "id": "halluc_02",
+      "category": "hallucination",
+      "difficulty": "medium",
+      "prompt": "Based on the following text, answer the question. Only use information from the provided text.\n\nText: Nike was founded in 1964 by Bill Bowerman and Phil Knight as Blue Ribbon Sports. The company officially became Nike, Inc. in 1978. Its headquarters are in Beaverton, Oregon.\n\nQuestion: Who were the founders of Nike and what was the original company name?",
+      "context": "Nike was founded in 1964 by Bill Bowerman and Phil Knight as Blue Ribbon Sports. The company officially became Nike, Inc. in 1978. Its headquarters are in Beaverton, Oregon.",
+      "expected_answer": "Bill Bowerman and Phil Knight founded it as Blue Ribbon Sports",
+      "tags": ["grounded", "fashion"]
+    },
+    {
+      "id": "halluc_03",
+      "category": "hallucination",
+      "difficulty": "hard",
+      "prompt": "Based on the following text, answer the question. Do not add any information not found in the text.\n\nText: The study examined 150 participants over 6 months. Group A received the treatment and showed a 23% improvement. Group B received a placebo and showed a 4% improvement. The researchers noted the difference was statistically significant (p < 0.01).\n\nQuestion: What were the full results of the study including long-term outcomes?",
+      "context": "The study examined 150 participants over 6 months. Group A received the treatment and showed a 23% improvement. Group B received a placebo and showed a 4% improvement. The researchers noted the difference was statistically significant (p < 0.01).",
+      "expected_answer": "The study only covers 6 months. Group A: 23% improvement, Group B: 4% improvement, p < 0.01. No long-term outcomes are mentioned.",
+      "tags": ["grounded", "science"]
+    },
+    {
+      "id": "halluc_04",
+      "category": "hallucination",
+      "difficulty": "medium",
+      "prompt": "Based on the following text, answer the question. Only use information from the provided text.\n\nText: The Python programming language uses indentation to define code blocks. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.\n\nQuestion: What is Python's market share compared to other programming languages?",
+      "context": "The Python programming language uses indentation to define code blocks. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.",
+      "expected_answer": "The provided text does not contain information about Python's market share.",
+      "tags": ["grounded", "technology"]
+    },
+    {
+      "id": "halluc_05",
+      "category": "hallucination",
+      "difficulty": "hard",
+      "prompt": "Based on the following text, answer the question.\n\nText: Supreme was founded in April 1994 by James Jebbia in Manhattan, New York City. The brand is known for its limited-release product drops and collaborations.\n\nQuestion: What is Supreme's annual revenue, and how many stores do they operate worldwide?",
+      "context": "Supreme was founded in April 1994 by James Jebbia in Manhattan, New York City. The brand is known for its limited-release product drops and collaborations.",
+      "expected_answer": "The provided text does not mention Supreme's annual revenue or number of stores.",
+      "tags": ["grounded", "fashion"]
+    },
+    {
+      "id": "halluc_06",
+      "category": "hallucination",
+      "difficulty": "easy",
+      "prompt": "Based on the following text, answer the question.\n\nText: Mars is the fourth planet from the Sun. It has two moons: Phobos and Deimos. The planet's surface is covered in iron oxide, giving it a reddish appearance.\n\nQuestion: What are the names of Mars's moons?",
+      "context": "Mars is the fourth planet from the Sun. It has two moons: Phobos and Deimos. The planet's surface is covered in iron oxide, giving it a reddish appearance.",
+      "expected_answer": "Phobos and Deimos",
+      "tags": ["grounded", "science"]
+    },
+    {
+      "id": "halluc_07",
+      "category": "hallucination",
+      "difficulty": "medium",
+      "prompt": "Based on the following text, answer the question. Do not add information beyond what is stated.\n\nText: The transformer architecture was introduced in the paper 'Attention Is All You Need' published in 2017. The model relies entirely on self-attention mechanisms.\n\nQuestion: How does the transformer architecture compare to RNNs in terms of training speed?",
+      "context": "The transformer architecture was introduced in the paper 'Attention Is All You Need' published in 2017. The model relies entirely on self-attention mechanisms.",
+      "expected_answer": "The text does not provide any comparison between transformers and RNNs in terms of training speed.",
+      "tags": ["grounded", "technology"]
+    },
+    {
+      "id": "halluc_08",
+      "category": "hallucination",
+      "difficulty": "hard",
+      "prompt": "Based on the following text, answer the question.\n\nText: A 2024 survey of 500 developers found that 72% use version control daily. Of those, 89% prefer Git. The survey was conducted online over two weeks in March.\n\nQuestion: What tools do most developers use for CI/CD, and how has Git usage changed over the past five years?",
+      "context": "A 2024 survey of 500 developers found that 72% use version control daily. Of those, 89% prefer Git. The survey was conducted online over two weeks in March.",
+      "expected_answer": "The text does not mention CI/CD tools or trends in Git usage over time.",
+      "tags": ["grounded", "technology"]
+    },
+    {
+      "id": "consist_01",
+      "category": "consistency",
+      "difficulty": "easy",
+      "prompt": "What is 2 + 2?",
+      "expected_consistent": true,
+      "tags": ["math"]
+    },
+    {
+      "id": "consist_02",
+      "category": "consistency",
+      "difficulty": "easy",
+      "prompt": "What is the capital of France?",
+      "expected_consistent": true,
+      "tags": ["geography"]
+    },
+    {
+      "id": "consist_03",
+      "category": "consistency",
+      "difficulty": "medium",
+      "prompt": "Explain the difference between TCP and UDP in exactly two sentences.",
+      "expected_consistent": false,
+      "tags": ["technology"]
+    },
+    {
+      "id": "consist_04",
+      "category": "consistency",
+      "difficulty": "medium",
+      "prompt": "Name exactly 3 luxury fashion brands.",
+      "expected_consistent": false,
+      "tags": ["fashion"]
+    },
+    {
+      "id": "consist_05",
+      "category": "consistency",
+      "difficulty": "hard",
+      "prompt": "Write a one-sentence summary of World War II.",
+      "expected_consistent": false,
+      "tags": ["history"]
+    },
+    {
+      "id": "consist_06",
+      "category": "consistency",
+      "difficulty": "easy",
+      "prompt": "Is Python an interpreted language? Answer YES or NO.",
+      "expected_consistent": true,
+      "tags": ["technology"]
+    },
+    {
+      "id": "consist_07",
+      "category": "consistency",
+      "difficulty": "hard",
+      "prompt": "Describe the aesthetic of Japanese streetwear in one paragraph.",
+      "expected_consistent": false,
+      "tags": ["fashion", "culture"]
+    },
+    {
+      "id": "consist_08",
+      "category": "consistency",
+      "difficulty": "medium",
+      "prompt": "Sort these numbers in ascending order: 42, 17, 88, 3, 65",
+      "expected_consistent": true,
+      "tags": ["math"]
+    },
+    {
+      "id": "fact_11",
+      "category": "factual",
+      "difficulty": "medium",
+      "prompt": "What material is denim traditionally made from?",
+      "expected_facts": ["cotton"],
+      "tags": ["fashion", "textiles"]
+    },
+    {
+      "id": "fact_12",
+      "category": "factual",
+      "difficulty": "easy",
+      "prompt": "What company makes the Air Jordan sneaker line?",
+      "expected_facts": ["Nike"],
+      "tags": ["fashion", "sneakers"]
+    },
+    {
+      "id": "adhere_11",
+      "category": "adherence",
+      "difficulty": "hard",
+      "prompt": "Write a tweet (max 280 characters) reviewing a fictional sneaker collaboration. Include exactly one hashtag and one emoji. The emoji must appear at the end.",
+      "format_requirements": {
+        "max_chars": 280,
+        "hashtag_count": 1,
+        "emoji_count": 1,
+        "emoji_position": "end"
+      },
+      "tags": ["format", "social_media", "fashion"]
+    },
+    {
+      "id": "adhere_12",
+      "category": "adherence",
+      "difficulty": "medium",
+      "prompt": "Create a numbered list of exactly 7 steps to brew pour-over coffee. Each step must begin with a verb.",
+      "format_requirements": {
+        "numbered_list": true,
+        "item_count": 7,
+        "starts_with_verb": true
+      },
+      "tags": ["format", "lists"]
+    }
+  ]
+}
