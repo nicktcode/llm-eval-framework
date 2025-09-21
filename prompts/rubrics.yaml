@@ -6,7 +6,7 @@ factual_accuracy:
   scores:
     5: "All stated facts are correct and complete. No errors or omissions."
     4: "Most facts are correct. Minor omissions but no incorrect statements."
-    3: "Some facts are correct but there are notable omissions or one minor error."
+    3: "Some facts are correct but there are notable omissions or one minor error. Also applies when the model refuses to answer but the question is answerable."
     2: "Multiple factual errors or significant omissions."
     1: "Mostly or entirely incorrect. Major factual errors present."
   judge_prompt: |
@@ -15,6 +15,12 @@ factual_accuracy:
     Original question: {prompt}
     Model's response: {response}
     Expected facts that should be present: {expected_facts}
+
+    Note: If the model refused to answer (e.g. "I cannot answer that" or
+    "I don't have enough information"), score it a 3 if the question was
+    answerable, since a refusal is neither correct nor incorrect. If the
+    question was genuinely unanswerable, a refusal is appropriate and
+    should be scored higher.
 
     Rate the factual accuracy on a scale of 1-5:
     5 = All facts correct and complete
