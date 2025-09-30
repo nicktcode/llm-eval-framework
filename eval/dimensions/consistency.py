@@ -1,7 +1,8 @@
 """Consistency scoring dimension.
 
 Evaluates how consistent a model's outputs are when given the same
-prompt multiple times. Uses exact string matching to compare responses.
+prompt multiple times. Uses pairwise semantic similarity judgments
+rather than exact string matching.
 """
 
 import itertools
@@ -22,7 +23,8 @@ def score_consistency(
 ) -> dict[str, Any]:
     """Score the consistency of multiple responses to the same prompt.
 
-    Computes pairwise exact match ratios between all response pairs.
+    Computes pairwise consistency scores between all response pairs
+    using the LLM judge, then aggregates them into an overall score.
 
     Args:
         prompt: The original prompt.
@@ -45,30 +47,35 @@ def score_consistency(
     pairs = list(itertools.combinations(range(len(responses)), 2))
 
     for i, j in pairs:
-        # Exact string comparison
-        if responses[i].strip() == responses[j].strip():
-            score = 5
-            reasoning = "Exact match"
-        else:
-            # Count matching words as a rough similarity
-            words_a = set(responses[i].lower().split())
-            words_b = set(responses[j].lower().split())
-            if not words_a or not words_b:
-                score = 1
-                reasoning = "Empty response"
-            else:
-                overlap = len(words_a & words_b) / len(words_a | words_b)
-                score = max(1, min(5, round(overlap * 5)))
-                reasoning = f"Word overlap: {overlap:.2f}"
+        judge_prompt = rubric["judge_prompt"].format(
+            prompt=prompt,
+            response_a=responses[i],
+            response_b=responses[j],
+        )
 
-        pairwise_scores.append({
-            "pair": (i, j),
-            "score": score,
-            "reasoning": reasoning,
-        })
+        result = call_judge(judge_prompt, judge_config)
 
-    valid_scores = [p["score"] for p in pairwise_scores]
+        if result is not None:
+            pairwise_scores.append(
+                {
+                    "pair": (i, j),
+                    "score": result["score"],
+                    "reasoning": result["reasoning"],
+                }
+            )
+
+    valid_scores = [p["score"] for p in pairwise_scores if p["score"] is not None]
+
+    if not valid_scores:
+        return {
+            "score": None,
+            "reasoning": "No valid pairwise scores obtained",
+            "pairwise_scores": pairwise_scores,
+            "variance": None,
+        }
+
     mean_score = sum(valid_scores) / len(valid_scores)
+
     variance = (
         sum((s - mean_score) ** 2 for s in valid_scores) / len(valid_scores)
         if len(valid_scores) > 1
@@ -87,6 +94,7 @@ def compute_lexical_similarity(response_a: str, response_b: str) -> float:
     """Compute simple lexical similarity between two responses.
 
     Uses Jaccard similarity on word sets as a quick baseline metric.
+    This supplements the LLM-based semantic similarity judgment.
 
     Args:
         response_a: First response text.
@@ -110,7 +118,14 @@ def compute_lexical_similarity(response_a: str, response_b: str) -> float:
 
 
 def aggregate_consistency_scores(scores: list[dict[str, Any]]) -> dict[str, Any]:
-    """Aggregate consistency scores across multiple prompts."""
+    """Aggregate consistency scores across multiple prompts.
+
+    Args:
+        scores: List of consistency score dictionaries.
+
+    Returns:
+        Summary statistics.
+    """
     valid_scores = [s["score"] for s in scores if s.get("score") is not None]
     variances = [s["variance"] for s in scores if s.get("variance") is not None]
 
