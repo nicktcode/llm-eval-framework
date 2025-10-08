@@ -81,9 +81,11 @@ def plot_dimension_scores(
     ax.axhline(y=5, color="gray", linestyle="--", alpha=0.3, linewidth=0.8)
 
     for bar, mean in zip(bars, means):
+        # Use dark text for readability against any bar color
         ax.text(
             bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.15,
-            f"{mean:.2f}", ha="center", va="bottom", fontsize=11, fontweight="bold",
+            f"{mean:.2f}", ha="center", va="bottom", fontsize=11,
+            fontweight="bold", color="#333333",
         )
 
     ax.spines["top"].set_visible(False)
@@ -123,6 +125,9 @@ def plot_temperature_comparison(
         len(conditions),
     )
 
+    # Use both color and hatching so differences are visible in grayscale
+    hatch_patterns = ["", "//", "xx", "..", "\\\\"]
+
     for idx, (condition, offset) in enumerate(zip(comparison, offsets)):
         values = [
             condition["dimensions"].get(k, 0) or 0
@@ -132,7 +137,8 @@ def plot_temperature_comparison(
             x + offset, values, bar_width,
             label=condition["condition"].replace("_", " ").title(),
             color=COLOR_LIST[idx % len(COLOR_LIST)],
-            edgecolor="white", linewidth=0.5,
+            edgecolor="#333333", linewidth=0.5,
+            hatch=hatch_patterns[idx % len(hatch_patterns)],
         )
 
     ax.set_ylabel("Mean Score (1-5)", fontsize=12)
