@@ -24,7 +24,7 @@ class TestEvalRunnerInit:
     def test_loads_config(self, runner):
         assert "model" in runner.config
         assert "judge" in runner.config
-        assert runner.config["model"]["name"] == "claude-sonnet-4-20250514"
+        assert runner.config["model"]["name"] == "claude-3-5-sonnet-20241022"
 
     def test_loads_prompts(self, runner):
         assert len(runner.prompts) > 0

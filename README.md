@@ -105,7 +105,7 @@ I want to be clear about the problems with LLM-as-judge:
 
 ## Sample results
 
-Results below are from a run using `claude-sonnet-4-20250514` with the minimal system prompt. Single run, not averaged across sessions.
+Results below are from a run using `claude-3-5-sonnet-20241022` with the minimal system prompt. Single run, not averaged across sessions.
 
 ### Scores at temperature 0.0
 

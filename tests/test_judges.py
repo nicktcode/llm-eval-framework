@@ -91,7 +91,7 @@ class TestCallJudge:
 
         result = call_judge(
             "Rate this response",
-            {"model": "claude-sonnet-4-20250514", "max_tokens": 512, "temperature": 0.0},
+            {"model": "claude-3-5-sonnet-20241022", "max_tokens": 512, "temperature": 0.0},
         )
 
         assert result is not None
@@ -112,7 +112,7 @@ class TestCallJudge:
 
         result = call_judge(
             "Rate this response",
-            {"model": "claude-sonnet-4-20250514", "max_tokens": 512},
+            {"model": "claude-3-5-sonnet-20241022", "max_tokens": 512},
         )
 
         assert result is None
@@ -127,7 +127,7 @@ class TestCallJudge:
 
         result = call_judge(
             "Rate this response",
-            {"model": "claude-sonnet-4-20250514", "max_tokens": 512},
+            {"model": "claude-3-5-sonnet-20241022", "max_tokens": 512},
         )
 
         assert result is None
@@ -146,7 +146,7 @@ class TestCallModel:
 
         result = call_model(
             "What is the answer?",
-            {"name": "claude-sonnet-4-20250514", "max_tokens": 1024},
+            {"name": "claude-3-5-sonnet-20241022", "max_tokens": 1024},
         )
 
         assert result == "The answer is 42"
@@ -161,7 +161,7 @@ class TestCallModel:
 
         result = call_model(
             "Hello",
-            {"name": "claude-sonnet-4-20250514", "max_tokens": 1024},
+            {"name": "claude-3-5-sonnet-20241022", "max_tokens": 1024},
             system_prompt="You are helpful.",
             temperature=0.5,
         )
@@ -179,7 +179,7 @@ class TestCallModel:
 
         result = call_model(
             "Hello",
-            {"name": "claude-sonnet-4-20250514", "max_tokens": 1024},
+            {"name": "claude-3-5-sonnet-20241022", "max_tokens": 1024},
         )
 
         assert result is None
