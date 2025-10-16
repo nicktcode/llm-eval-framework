@@ -49,7 +49,7 @@ llm-eval-framework/
 ## Setup
 
 ```bash
-git clone https://github.com/nthommen/llm-eval-framework.git
+git clone https://github.com/nicktcode/llm-eval-framework.git
 cd llm-eval-framework
 pip install -r requirements.txt
 export ANTHROPIC_API_KEY=your-key-here
