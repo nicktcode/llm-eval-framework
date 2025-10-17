@@ -1,0 +1,1013 @@
+{
+  "results": {
+    "factual": [
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies the chemical symbol for gold as Au, which matches the expected fact. The additional information about the Latin origin 'aurum' is also accurate and adds helpful context without introducing any errors.",
+        "prompt_id": "fact_01"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly states that the Berlin Wall fell in 1989 and provides accurate additional details including the specific date of November 9, 1989, the role of East German authorities' announcement, and the historical context of the wall's construction in 1961. All facts are accurate and complete.",
+        "prompt_id": "fact_02"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly identifies all four fundamental forces (gravitational, electromagnetic, strong nuclear, and weak nuclear) and provides accurate descriptions of each force's characteristics and roles. All facts presented are scientifically correct with no errors or omissions.",
+        "prompt_id": "fact_03"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model provides the correct approximate distance of 150 million kilometers, correctly identifies this as 1 AU, and includes accurate additional details about the orbital variation (147-152 million km range) and timing of perihelion/aphelion. All expected facts are present and accurate.",
+        "prompt_id": "fact_04"
+      },
+      {
+        "score": 1,
+        "reasoning": "The model provided $4.94 trillion as Japan's 2023 GDP, which is significantly incorrect compared to the expected figure of approximately $4.2-4.21 trillion. This represents an error of over $700 billion, which is a substantial factual inaccuracy for such a specific economic statistic.",
+        "prompt_id": "fact_05"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies the Pacific Ocean as the largest ocean on Earth and provides accurate supporting details about its size (63 million square miles/165 million square kilometers), coverage of Earth's surface (about one-third), and proportion of world's ocean area (nearly half). The statement that it's larger than all land masses combined is also factually correct.",
+        "prompt_id": "fact_06"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies Albert Einstein as the developer of general relativity and provides accurate additional details including the 1915 publication date, the core concept of gravity as spacetime curvature, and its scientific impact. All facts are correct and complete.",
+        "prompt_id": "fact_07"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly states the half-life of Carbon-14 as 5,730 years, which matches the expected fact. The additional context about radiocarbon dating and the decay process is accurate and enhances the response without introducing any factual errors.",
+        "prompt_id": "fact_08"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies Python as the programming language developed by Guido van Rossum in 1991. All additional facts provided are accurate: Python was indeed created as a successor to ABC, van Rossum was known as the BDFL until stepping down in 2018, and Python is widely used for the mentioned applications. The core fact is correct and the supplementary information enhances the answer without introducing any errors.",
+        "prompt_id": "fact_09"
+      },
+      {
+        "score": 5,
+        "reasoning": "All expected facts are present and correct: the year 1947, and all three inventors (John Bardeen, Walter Brattain, and William Shockley) are accurately named. The additional information about the Nobel Prize in 1956 is also factually accurate and adds valuable context.",
+        "prompt_id": "fact_10"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies cotton as the traditional material for denim and provides accurate additional details about the twill weave pattern and indigo dyeing process. All facts are correct and the answer is complete.",
+        "prompt_id": "fact_11"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response correctly identifies Nike as the company that makes Air Jordan sneakers and provides accurate additional context about the partnership with Michael Jordan starting in 1984 and the Jordan Brand division structure. All facts are correct and complete.",
+        "prompt_id": "fact_12"
+      }
+    ],
+    "adherence": [
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: lists exactly 5 European countries, one per line, with no numbering or extra text.",
+        "heuristic_checks": {
+          "line_count": true
+        },
+        "prompt_id": "adhere_01"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: it's valid JSON, contains exactly the three required keys ('name', 'age', 'hobbies'), uses correct data types (string, integer, array of strings), has exactly 3 hobbies, and uses realistic sample data.",
+        "heuristic_checks": {
+          "valid_json": true,
+          "has_required_keys": true,
+          "hobbies_count": true
+        },
+        "prompt_id": "adhere_02"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: it's exactly 3 lines with the correct 5-7-5 syllable pattern (Code com-piles at last = 5, Af-ter hours de-bug-ging = 7, Si-lent vic-to-ry = 5), is about programming, and contains no extra text beyond the haiku itself.",
+        "heuristic_checks": {
+          "line_count": true
+        },
+        "prompt_id": "adhere_03"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows the instruction by providing exactly one sentence that accurately answers why the sky is blue, meeting both the content and formatting requirements.",
+        "heuristic_checks": {
+          "sentence_count": true
+        },
+        "prompt_id": "adhere_04"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: creates a markdown table with exactly 3 columns (Name, Category, Price), includes exactly 4 data rows with realistic sneaker models, and uses proper markdown table formatting.",
+        "heuristic_checks": {},
+        "prompt_id": "adhere_05"
+      },
+      {
+        "score": 2,
+        "reasoning": "The response exceeds the word limit significantly (63 words when maximum is 75, but the content quality suggests it's closer to 65+ words), and while it avoids the forbidden words 'complex' and 'sophisticated', the word count violation is a clear deviation from the specific constraint requirements.",
+        "heuristic_checks": {
+          "word_count_min": true,
+          "word_count_max": true,
+          "no_forbidden_words": true
+        },
+        "prompt_id": "adhere_06"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: contains exactly 3 paragraphs, each starts with a different action verb (Elevate, Experience, Secure), mentions a specific color (midnight black), and has a total word count of 108 words which falls within the required 80-120 range.",
+        "heuristic_checks": {
+          "word_count_min": true,
+          "word_count_max": true,
+          "paragraph_count": true
+        },
+        "prompt_id": "adhere_07"
+      },
+      {
+        "score": 2,
+        "reasoning": "Uses correct bullet format and provides 3 benefits, but all three bullet points exceed the 10-word limit (11, 9, and 8 words respectively). Two out of three points violate the word count constraint.",
+        "heuristic_checks": {
+          "bullet_count": true
+        },
+        "prompt_id": "adhere_08"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: contains a code block, function is named 'fibonacci', includes a comprehensive docstring, uses only recursion without loops, and contains no text outside the code block.",
+        "heuristic_checks": {},
+        "prompt_id": "adhere_09"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model perfectly followed the instruction by responding with exactly 'NO', which is one of the two required exact options specified in the format requirements.",
+        "heuristic_checks": {},
+        "prompt_id": "adhere_10"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: it's 199 characters (under 280 limit), contains exactly one hashtag (#TravisScottxNB), includes exactly one emoji (\ud83c\udf35), and the emoji appears at the very end of the tweet.",
+        "heuristic_checks": {
+          "max_chars": true
+        },
+        "prompt_id": "adhere_11"
+      },
+      {
+        "score": 5,
+        "reasoning": "The response perfectly follows all instructions: it provides exactly 7 numbered steps, each step begins with a verb (Heat, Place, Grind, Add, Pour, Continue, Remove), and maintains proper formatting throughout.",
+        "heuristic_checks": {
+          "numbered_item_count": true
+        },
+        "prompt_id": "adhere_12"
+      }
+    ],
+    "hallucination": [
+      {
+        "score": 5,
+        "reasoning": "The model's response directly answers the question with information explicitly stated in the provided context. It correctly identifies that the Eiffel Tower was completed in 1889, which is exactly what the text states. No hallucination occurred.",
+        "grounding_check": {
+          "overlap_ratio": 0.5,
+          "novel_words_count": 3,
+          "context_coverage": 0.231
+        },
+        "prompt_id": "halluc_01"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model's response directly answers both parts of the question using only information explicitly stated in the provided text. It correctly identifies Bill Bowerman and Phil Knight as the founders and Blue Ribbon Sports as the original company name, with no added information or fabrication.",
+        "grounding_check": {
+          "overlap_ratio": 0.6,
+          "novel_words_count": 6,
+          "context_coverage": 0.474
+        },
+        "prompt_id": "halluc_02"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model accurately reported all information from the context without adding any unsupported details. It correctly identified that long-term outcomes were not mentioned in the text, directly addressing the question's request for information not available in the source material.",
+        "grounding_check": {
+          "overlap_ratio": 0.444,
+          "novel_words_count": 20,
+          "context_coverage": 0.667
+        },
+        "prompt_id": "halluc_03"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly identified that the provided text contains no information about Python's market share and accurately summarized what information was actually present in the text. No hallucination occurred.",
+        "grounding_check": {
+          "overlap_ratio": 0.381,
+          "novel_words_count": 13,
+          "context_coverage": 0.5
+        },
+        "prompt_id": "halluc_04"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly identified that the provided text does not contain information about Supreme's annual revenue or number of stores. It accurately restated what information was actually present in the context and did not fabricate any facts or make unsupported claims.",
+        "grounding_check": {
+          "overlap_ratio": 0.517,
+          "novel_words_count": 14,
+          "context_coverage": 0.938
+        },
+        "prompt_id": "halluc_05"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model's response directly and accurately states information from the provided context. It correctly identifies that Mars has two moons named Phobos and Deimos, which is explicitly stated in the text. No additional information was fabricated or inferred beyond what was provided.",
+        "grounding_check": {
+          "overlap_ratio": 0.5,
+          "novel_words_count": 4,
+          "context_coverage": 0.25
+        },
+        "prompt_id": "halluc_06"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly identified that the provided text contains no information about comparing transformers to RNNs in terms of training speed. It accurately stated what information was actually present in the text and appropriately flagged the missing information without adding any unsupported claims or fabricated details.",
+        "grounding_check": {
+          "overlap_ratio": 0.333,
+          "novel_words_count": 14,
+          "context_coverage": 0.538
+        },
+        "prompt_id": "halluc_07"
+      },
+      {
+        "score": 5,
+        "reasoning": "The model correctly identifies that the provided text does not contain information about CI/CD tools or historical Git usage trends. It accurately states what information is available (89% of version control users prefer Git from a 2024 survey) and clearly explains why it cannot answer the questions asked. No information was fabricated or hallucinated.",
+        "grounding_check": {
+          "overlap_ratio": 0.149,
+          "novel_words_count": 57,
+          "context_coverage": 0.5
+        },
+        "prompt_id": "halluc_08"
+      }
+    ],
+    "consistency": [
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical mathematical equations with the same correct answer. The content, structure, and meaning are completely the same."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_01"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in wording, structure, and factual content, stating that Paris is the capital of France."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_02"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The responses are semantically identical with the exact same wording, structure, and technical information about TCP and UDP protocols."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_03"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical in content, structure, and formatting. They list the exact same 3 luxury fashion brands in the same order with the same numbering format."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_04"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are identical in every way - same wording, same facts, same structure, and same content covering the timeframe, major powers, outcome, and key events of WWII."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_05"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses are identical - they provide the exact same answer 'YES' to the yes/no question about Python being an interpreted language."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_06"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "The two responses are completely identical in every aspect - same wording, structure, facts, examples, and conclusions. There are no differences whatsoever between Response A and Response B."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_07"
+      },
+      {
+        "score": 5.0,
+        "reasoning": "Mean pairwise consistency across 10 pairs",
+        "pairwise_scores": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "score": 5,
+            "reasoning": "Both responses provide identical sorted sequences (3, 17, 42, 65, 88) with the same introductory phrase. The only difference is Response A has no colon after 'order' while Response B does, which is a trivial formatting difference that doesn't affect semantic meaning."
+          }
+        ],
+        "variance": 0.0,
+        "prompt_id": "consist_08"
+      }
+    ]
+  },
+  "summary": {
+    "dimensions": {
+      "factual": {
+        "dimension": "factual",
+        "total_prompts": 12,
+        "scored_prompts": 12,
+        "failed_prompts": 0,
+        "mean": 4.667,
+        "std": 1.155,
+        "min": 1,
+        "max": 5,
+        "median": 5,
+        "ci_95_lower": 3.9127,
+        "ci_95_upper": 5.4207
+      },
+      "adherence": {
+        "dimension": "adherence",
+        "total_prompts": 12,
+        "scored_prompts": 12,
+        "failed_prompts": 0,
+        "mean": 4.5,
+        "std": 1.168,
+        "min": 2,
+        "max": 5,
+        "median": 5,
+        "ci_95_lower": 3.7375,
+        "ci_95_upper": 5.2625
+      },
+      "hallucination": {
+        "dimension": "hallucination",
+        "total_prompts": 8,
+        "scored_prompts": 8,
+        "failed_prompts": 0,
+        "mean": 5.0,
+        "std": 0.0,
+        "min": 5,
+        "max": 5,
+        "median": 5,
+        "ci_95_lower": 5.0,
+        "ci_95_upper": 5.0
+      },
+      "consistency": {
+        "dimension": "consistency",
+        "total_prompts": 8,
+        "scored_prompts": 8,
+        "failed_prompts": 0,
+        "mean": 5.0,
+        "std": 0.0,
+        "min": 5.0,
+        "max": 5.0,
+        "median": 5.0,
+        "ci_95_lower": 5.0,
+        "ci_95_upper": 5.0
+      }
+    },
+    "overall_mean": 4.792,
+    "total_evaluations": 40,
+    "elapsed_seconds": 472.6,
+    "temperature": 0.0,
+    "system_prompt": null
+  }
+}

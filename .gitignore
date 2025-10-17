@@ -25,8 +25,6 @@ env/
 .env.local
 
 # Results and outputs
-results/
-*.png
 *.html
 
 # OS
